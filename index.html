@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Loader</title>
+</head>
+<body>
+
+<img src="">
+
+<script>
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    if (urlParams.has('image')) {
+        const imageUrl = urlParams.get('image');
+        
+        document.querySelector('img').src = imageUrl;
+    } else {
+        alert('No image parameter found in the URL.');
+    }
+};
+</script>
+
+</body>
+</html>
